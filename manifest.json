@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "version": "0.1",
+  "name": "Video Popup",
+  "permissions": ["storage"],
+  "action": {
+    "default_icon": {
+      "16": "assets/video.png",
+      "48": "assets/video.png",
+      "128": "assets/video.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/play.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://portal.whiterabbit.group/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
